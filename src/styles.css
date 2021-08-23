@@ -122,7 +122,6 @@ a:active {
 	top: 0;
 	right: 0;
 	margin: 1rem 0.5rem;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -246,7 +245,8 @@ button {
 		margin-right: 0.5rem;
 	}
 	.header-container {
-		gap: 0.5rem;
+		gap: 1.2rem;
+		margin-top: -2rem;
 	}
 	.greet,
 	.name,
@@ -488,7 +488,7 @@ button {
 		display: none;
 	}
 	.about-heading {
-		padding-top: 2rem;
+		padding-top: 1rem;
 	}
 }
 @media screen and (max-width: 720px) {
@@ -501,7 +501,7 @@ button {
 }
 @media screen and (max-width: 600px) {
 	.about-container {
-		width: 92%;
+		width: 97%;
 	}
 	.location-icon {
 		margin-left: 0;
