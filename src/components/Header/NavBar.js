@@ -107,7 +107,7 @@ const NavBar = ({ navToggle, setNavToggle, hamburgerRef }) => {
 					className="github-icon"
 					target="_blank"
 					rel="noopener noreferrer"
-					href="https://github.com/mohammedirsath"
+					href="https://github.com/mdirshath"
 				>
 					<AiFillGithub />
 				</a>
@@ -115,7 +115,7 @@ const NavBar = ({ navToggle, setNavToggle, hamburgerRef }) => {
 					className="linkedin-icon"
 					target="_blank"
 					rel="noopener noreferrer"
-					href="https://www.linkedin.com/in/mohammed-irsath-106736204"
+					href="https://www.linkedin.com/in/mdirshath/"
 				>
 					<FaLinkedinIn />
 				</a>
@@ -123,7 +123,7 @@ const NavBar = ({ navToggle, setNavToggle, hamburgerRef }) => {
 					className="twitter-icon"
 					target="_blank"
 					rel="noopener noreferrer"
-					href="https://twitter.com/irshath23"
+					href="https://twitter.com/mdirshath23"
 				>
 					<AiOutlineTwitter />
 				</a>

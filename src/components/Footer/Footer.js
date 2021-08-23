@@ -3,17 +3,17 @@ const Footer = () => {
 		{
 			id: 1,
 			name: "Github",
-			link: "https://github.com/mohammedirsath",
+			link: "https://github.com/mdirshath",
 		},
 		{
 			id: 2,
 			name: "LinkedIn",
-			link: "https://www.linkedin.com/in/mohammed-irsath-106736204/",
+			link: "https://www.linkedin.com/in/mdirshath/",
 		},
 		{
 			id: 3,
 			name: "Twitter",
-			link: "https://twitter.com/irshath23",
+			link: "https://twitter.com/mdirshath23",
 		},
 	];
 
