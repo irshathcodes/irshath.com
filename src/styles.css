@@ -509,6 +509,7 @@ button {
 	.about-me {
 		margin: 0rem;
 		padding: 0.5rem;
+		letter-spacing: 0px;
 	}
 	.about-cv {
 		margin: 2rem 0;

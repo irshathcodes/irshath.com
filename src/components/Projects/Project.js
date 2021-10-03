@@ -1,11 +1,11 @@
 import { IoIosRocket } from "react-icons/io";
 import { AiFillGithub } from "react-icons/ai";
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Project = ({ img, name, description, websiteLink, githubLink, tech }) => {
 	return (
 		<>
-			<Slide>
+			<Fade>
 				<div className="project-item-container">
 					<div
 						className="project-bg-container"
@@ -47,7 +47,7 @@ const Project = ({ img, name, description, websiteLink, githubLink, tech }) => {
 						</a>
 					</div>
 				</div>
-			</Slide>
+			</Fade>
 		</>
 	);
 };
