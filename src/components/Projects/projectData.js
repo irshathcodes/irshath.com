@@ -21,13 +21,13 @@ const data = [
 	},
 	{
 		id: 3,
-		img: "images/todolist.jpg",
+		img: "images/todolist.png",
 		name: "To-do List",
 		description:
-			"Just a Simple to-do List Where you can enter your to-dos and the data will be saved in your browser's local storage ",
-		websiteLink: "https://t-o-d-o-list.netlify.app/",
-		githubLink: "https://github.com/mdirshath/todo-list",
-		tech: "React, Redux",
+			"Just a Simple to-do List Where you can login and save your todos and access them anywhere. ",
+		websiteLink: "https://notemytodo.netlify.app/",
+		githubLink: "https://github.com/mdirshath/todo-list-crud-app",
+		tech: "React, NodeJS, MongoDB",
 	},
 ];
 
