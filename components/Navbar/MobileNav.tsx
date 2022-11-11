@@ -21,7 +21,7 @@ export default function MobileNav({
 		<>
 			<div
 				className={cn(
-					"fixed inset-0  h-screen w-full backdrop-blur-sm transition-all sm:hidden",
+					"fixed inset-0 h-screen backdrop-blur-sm transition-all sm:hidden",
 					{
 						"z-40 bg-black-800/40": showMobileMenu,
 						hidden: !showMobileMenu,
@@ -32,21 +32,21 @@ export default function MobileNav({
 
 			<div
 				className={cn(
-					"-translate-y-100 fixed inset-x-4 top-4 z-50 scale-0 rounded-2xl bg-white p-8  opacity-0  transition-all duration-300  dark:bg-zinc-800 sm:hidden",
+					"-translate-y-100 fixed inset-x-4 top-8 z-50  scale-0 rounded-2xl bg-white  p-8  opacity-0 transition-all  duration-300 dark:bg-zinc-800 sm:hidden",
 					{
 						"translate-y-0 scale-100 opacity-100": showMobileMenu,
 					}
 				)}
 			>
 				<div className="mb-8 flex justify-between">
-					<h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300">
+					<h3 className="font-semibold text-gray-600 dark:text-gray-300">
 						Navigation
 					</h3>
 					<button
 						className="rounded px-1 transition-shadow duration-300 active:ring-2 active:ring-gray-400 "
 						onClick={() => setShowMobileMenu(false)}
 					>
-						<FiX className="h-6 w-6 dark:text-gray-300" />
+						<FiX className="h-5 w-5 dark:text-gray-300" />
 					</button>
 				</div>
 				<ul className="divide-y dark:divide-gray-600">
@@ -59,7 +59,7 @@ export default function MobileNav({
 						>
 							<li
 								className={cn(
-									"w-full py-2 text-lg font-medium capitalize tracking-tight  active:rounded-md active:bg-gray-100 dark:active:bg-gray-600",
+									"w-full py-2 text-lg font-medium capitalize tracking-tight active:rounded-md active:bg-gray-100 dark:active:bg-gray-600",
 									{
 										"text-teal-500 dark:text-teal-400":
 											router.pathname === link.url,

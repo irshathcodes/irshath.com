@@ -11,8 +11,10 @@ export default function Layout({ children }: Props) {
 	return (
 		<>
 			<div className="transition-colors dark:bg-black-900">
-				<Navbar />
-				<main className="mx-auto max-w-3xl lg:max-w-4xl">{children}</main>
+				<div className="mx-auto max-w-3xl  lg:max-w-4xl">
+					<Navbar />
+					<main className="px-4">{children}</main>
+				</div>
 			</div>
 		</>
 	);
