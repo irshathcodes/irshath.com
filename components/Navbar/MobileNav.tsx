@@ -2,47 +2,71 @@ import React from "react";
 import { FiX } from "react-icons/fi";
 import cn from "classnames";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {
 	navLinks: { id: number; name: string; url: string }[];
-	showMenu: boolean;
-	setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
+	showMobileMenu: boolean;
+	setShowMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function MobileNav({ navLinks, showMenu, setShowMenu }: Props) {
+export default function MobileNav({
+	navLinks,
+	showMobileMenu,
+	setShowMobileMenu,
+}: Props) {
+	const router = useRouter();
+
 	return (
 		<>
 			<div
-				className={`inset-0 sm:hidden block fixed transition-all backdrop-blur-sm ${
-					showMenu ? "z-40 bg-black-800/40" : "-z-40"
-				}`}
-				onClick={() => setShowMenu(false)}
+				className={cn(
+					"fixed inset-0  h-screen w-full backdrop-blur-sm transition-all sm:hidden",
+					{
+						"z-40 bg-black-800/40": showMobileMenu,
+						hidden: !showMobileMenu,
+					}
+				)}
+				onClick={() => setShowMobileMenu(false)}
 			></div>
+
 			<div
 				className={cn(
-					"fixed rounded-2xl transition-all duration-300 inset-x-4 -translate-y-100 scale-0 top-4 opacity-0  sm:hidden  z-50 p-8  bg-white dark:bg-zinc-800",
+					"-translate-y-100 fixed inset-x-4 top-4 z-50 scale-0 rounded-2xl bg-white p-8  opacity-0  transition-all duration-300  dark:bg-zinc-800 sm:hidden",
 					{
-						"opacity-100 translate-y-0 scale-100": showMenu,
+						"translate-y-0 scale-100 opacity-100": showMobileMenu,
 					}
 				)}
 			>
-				<div className="flex justify-between mb-8">
-					<h3 className="font-semibold text-xl dark:text-gray-300 text-gray-600">
+				<div className="mb-8 flex justify-between">
+					<h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300">
 						Navigation
 					</h3>
 					<button
-						className="active:ring-2 px-1 active:ring-gray-400 transition-shadow duration-300 rounded "
-						onClick={() => setShowMenu(false)}
+						className="rounded px-1 transition-shadow duration-300 active:ring-2 active:ring-gray-400 "
+						onClick={() => setShowMobileMenu(false)}
 					>
-						<FiX className="w-6 h-6 dark:text-gray-300" />
+						<FiX className="h-6 w-6 dark:text-gray-300" />
 					</button>
 				</div>
 				<ul className="divide-y dark:divide-gray-600">
 					{navLinks.map((link) => (
-						<Link href={link.url} className="block">
+						<Link
+							href={link.url}
+							className="block"
+							key={link.id}
+							onClick={() => setShowMobileMenu(false)}
+						>
 							<li
-								key={link.id}
-								className="text-gray-700 w-full dark:text-gray-300 active:bg-gray-100 active:rounded-md dark:active:bg-gray-600 font-medium capitalize tracking-tight  text-lg py-2"
+								className={cn(
+									"w-full py-2 text-lg font-medium capitalize tracking-tight  active:rounded-md active:bg-gray-100 dark:active:bg-gray-600",
+									{
+										"text-teal-500 dark:text-teal-400":
+											router.pathname === link.url,
+										"text-gray-700 dark:text-gray-300":
+											router.pathname !== link.url,
+									}
+								)}
 							>
 								{link.name}
 							</li>

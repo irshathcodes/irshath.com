@@ -1,6 +1,7 @@
-import { useState } from "react";
-import cn from "classnames";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import cn from "classnames";
 import myLogo from "@/public/my-logo.png";
 import { FiMoon } from "react-icons/fi";
 import { HiOutlineMenuAlt4, HiOutlineSun } from "react-icons/hi";
@@ -15,61 +16,90 @@ const navLinks = [
 	{ id: 4, name: "contact", url: "/contact" },
 ];
 
-const iconStyles =
-	"w-6 h-6 inline-block dark:text-gray-200	  rotate-90 transition-all duration-300 opacity-0";
-
 export default function Navbar() {
-	const [showMenu, setShowMenu] = useState(false);
+	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const [darkMode, setDarkMode] = useDarkMode();
+	const [showNav, setShowNav] = useState(true);
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+	const router = useRouter();
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPos = window.scrollY;
+
+			if (currentScrollPos > prevScrollPos) {
+				setShowNav(false);
+			} else {
+				setShowNav(true);
+			}
+
+			setPrevScrollPos(currentScrollPos);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [prevScrollPos]);
 
 	return (
 		<nav
-			className={` flex justify-between dark:bg-black-900  mx-auto max-w-2xl lg:max-w-5xl	 items-center p-4 `}
+			className={cn(
+				"sticky top-0 mx-auto flex max-w-2xl  items-center  justify-between p-4 transition-transform	 dark:bg-black-900 lg:max-w-5xl ",
+				{
+					"translate-y-0": showNav,
+					"-translate-y-20": !showNav,
+				}
+			)}
 		>
-			<div>
-				<Image src={myLogo} alt="my logo" className="w-12 h-12" />
-			</div>
+			<Link href="/">
+				<Image src={myLogo} alt="my logo" className="h-12 w-12" />
+			</Link>
 
 			<MobileNav
 				navLinks={navLinks}
-				showMenu={showMenu}
-				setShowMenu={setShowMenu}
+				showMobileMenu={showMobileMenu}
+				setShowMobileMenu={setShowMobileMenu}
 			/>
-			<ul className="hidden sm:flex gap-8 rounded-full bg-white/90 px-6 py-2 text-sm font-medium text-black-800 shadow-lg shadow-black-800/5 ring-1 ring-black-900/5 backdrop-blur dark:bg-black-800/90 dark:text-zinc-200 dark:ring-white/10">
+
+			<ul className="hidden gap-8 rounded-full bg-white/90 px-6 py-2 text-sm font-medium text-black-800 shadow-lg shadow-black-800/5 ring-1 ring-black-900/5 backdrop-blur dark:bg-black-800/90 dark:text-zinc-200 dark:ring-white/10 sm:flex">
 				{navLinks.map((link) => (
 					<li
 						key={link.id}
-						className=" text-gray-700 transition-all duration-300 hover:text-teal-500 dark:hover:text-teal-400 dark:text-gray-100 capitalize"
+						className={cn(
+							" capitalize text-gray-700 transition-all duration-300 hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-400",
+							{
+								"text-teal-500 dark:text-teal-400":
+									router.pathname === link.url,
+								"text-gray-700 dark:text-gray-100":
+									router.pathname !== link.url,
+							}
+						)}
 					>
 						<Link href={link.url}>{link.name}</Link>
 					</li>
 				))}
 			</ul>
 
-			<div className="flex gap-4 items-center">
+			<div className="flex items-center gap-4">
+				{/* dark/light theme toggler */}
 				<button
 					type="button"
-					className="relative bg-gray-100 dark:bg-black-700 shadow-sm active:outline-none py-1 px-2 rounded-lg"
+					className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm active:outline-none dark:bg-black-700"
 					onClick={() => setDarkMode(!darkMode)}
 				>
 					<HiOutlineSun
-						className={cn(iconStyles, "absolute", {
-							"opacity-100 rotate-0": darkMode,
-						})}
+						className=" absolute inline-block h-6 w-6 rotate-90 text-gray-900  opacity-0 transition-all duration-300 dark:rotate-0  
+							dark:text-gray-200 dark:opacity-100 "
 					/>
-					<FiMoon
-						className={cn(iconStyles, {
-							"opacity-100 rotate-0": !darkMode,
-						})}
-					/>
+					<FiMoon className="inline-block h-6 w-6 text-gray-900 opacity-100 transition-all duration-300  dark:rotate-90 dark:text-gray-200 dark:opacity-0" />
 				</button>
 
+				{/* Mobile hamburger menu */}
 				<button
 					type="button"
 					className="sm:hidden"
-					onClick={() => setShowMenu(!showMenu)}
+					onClick={() => setShowMobileMenu(!showMobileMenu)}
 				>
-					<HiOutlineMenuAlt4 className="w-8 h-8 text-gray-700 dark:text-gray-300" />
+					<HiOutlineMenuAlt4 className="h-8 w-8 text-gray-700 dark:text-gray-300" />
 				</button>
 			</div>
 		</nav>
