@@ -5,12 +5,12 @@ export default function Hero() {
 	return (
 		<section className="h-[calc(80vh-80px)]">
 			<div className="mx-auto mt-16 flex h-full w-full flex-col  sm:items-start">
-				<h1 className=" text-4xl font-extrabold  capitalize  tracking-tight text-gray-800 dark:text-gray-200 sm:text-6xl">
+				<h1 className=" text-4xl font-extrabold  capitalize  tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl">
 					<span className="block pb-2">hi,</span>
 					<span className="block pb-2">i'm irshath</span>
 					<span className="block pb-1">web developer</span>
 				</h1>
-				<p className="py-4 text-left text-xl font-medium text-gray-600 dark:text-gray-400 sm:text-2xl">
+				<p className="py-4 text-left text-xl font-medium text-gray-600 dark:text-gray-400 sm:text-xl">
 					Love to create experience on the web.
 				</p>
 				<div className="space-x-4">
