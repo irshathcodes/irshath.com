@@ -7,7 +7,7 @@ interface Posts {
 	frontmatter: {
 		title: string;
 		date: string;
-		description: string;
+		excerpt: string;
 	};
 }
 [];
@@ -30,6 +30,14 @@ export default function getPosts() {
 			slug,
 			frontmatter,
 		} as Posts;
+	});
+
+	// sort by recent posts
+	posts.sort((a, b) => {
+		return (
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf()
+		);
 	});
 
 	return posts;
