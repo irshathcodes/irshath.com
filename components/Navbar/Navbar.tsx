@@ -5,7 +5,7 @@ import cn from "classnames";
 import myLogo from "@/public/my-logo.png";
 import { FiMoon } from "react-icons/fi";
 import { HiOutlineMenuAlt4, HiOutlineSun } from "react-icons/hi";
-import useDarkMode from "@/hooks/useDarkMode";
+import { useTheme } from "next-themes";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
 
@@ -18,11 +18,16 @@ const navLinks = [
 
 export default function Navbar() {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
-	const [darkMode, setDarkMode] = useDarkMode();
+	const { resolvedTheme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
 	const [showNav, setShowNav] = useState(true);
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 
 	const router = useRouter();
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -65,7 +70,7 @@ export default function Navbar() {
 					<li
 						key={link.id}
 						className={cn(
-							" capitalize text-gray-700 transition-all duration-300 hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-400",
+							" capitalize text-gray-700  hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-400",
 							{
 								"text-teal-500 dark:text-teal-400":
 									router.pathname === link.url,
@@ -80,18 +85,22 @@ export default function Navbar() {
 			</ul>
 
 			<div className="flex items-center gap-4">
-				{/* dark/light theme toggler */}
-				<button
-					type="button"
-					className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm active:outline-none dark:bg-black-700"
-					onClick={() => setDarkMode(!darkMode)}
-				>
-					<HiOutlineSun
-						className=" absolute inline-block h-6 w-6 rotate-90 text-gray-900  opacity-0 transition-all duration-300 dark:rotate-0  
+				{/* show theme toggle button only after the dom loaded */}
+				{mounted && (
+					<button
+						type="button"
+						className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm active:outline-none dark:bg-black-700"
+						onClick={() =>
+							setTheme(resolvedTheme === "dark" ? "light" : "dark")
+						}
+					>
+						<HiOutlineSun
+							className=" absolute inline-block h-6 w-6 rotate-90 text-gray-900  opacity-0 transition-all duration-300 dark:rotate-0  
 							dark:text-gray-200 dark:opacity-100 "
-					/>
-					<FiMoon className="inline-block h-6 w-6 text-gray-900 opacity-100 transition-all duration-300  dark:rotate-90 dark:text-gray-200 dark:opacity-0" />
-				</button>
+						/>
+						<FiMoon className="inline-block h-6 w-6 text-gray-900 opacity-100 transition-all duration-300  dark:rotate-90 dark:text-gray-200 dark:opacity-0" />
+					</button>
+				)}
 
 				{/* Mobile hamburger menu */}
 				<button
