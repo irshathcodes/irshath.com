@@ -19,6 +19,11 @@ module.exports = {
 				gray: colors.slate,
 				black: colors.zinc,
 			},
+			screens: {
+				"max-lg": {
+					max: "1023px",
+				},
+			},
 		},
 	},
 	plugins: [],
