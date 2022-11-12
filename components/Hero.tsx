@@ -3,7 +3,7 @@ const buttonStyles =
 
 export default function Hero() {
 	return (
-		<section className="h-[calc(80vh-80px)]">
+		<section className="h-[calc(80vh-80px)] px-4">
 			<div className="mx-auto mt-16 flex h-full w-full flex-col  sm:items-start">
 				<h1 className=" text-4xl font-extrabold  capitalize  tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl">
 					<span className="block pb-2">hi,</span>
