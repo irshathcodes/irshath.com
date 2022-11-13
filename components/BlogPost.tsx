@@ -10,7 +10,7 @@ interface Props {
 
 export default function BlogPost({ title, excerpt, date, slug }: Props) {
 	return (
-		<article className="w-fit p-6 transition-colors lg:m-2 lg:grid lg:grid-cols-[220px_1fr]   max-lg:hover:bg-black-200/50 dark:max-lg:hover:bg-black-700/70">
+		<article className="w-fit rounded-md px-2 py-6 transition-colors lg:m-2 lg:grid lg:grid-cols-[220px_1fr] max-lg:hover:bg-black-200/50 dark:max-lg:hover:bg-black-700/70">
 			<div className="mb-4  border border-transparent border-l-gray-300 pl-2   dark:border-l-gray-800 lg:m-4 lg:mb-0 lg:p-2 lg:pl-4">
 				<time className="text-sm text-gray-600 dark:text-gray-400 lg:text-base">
 					{date}

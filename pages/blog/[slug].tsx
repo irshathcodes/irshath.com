@@ -20,11 +20,11 @@ export default function Post({ frontmatter, content }: Props) {
 			<button
 				type="button"
 				onClick={() => router.back()}
-				className="mt-4 ml-4 w-fit rounded-md bg-gray-200/70 px-2  py-2 ring-teal-600 active:ring dark:bg-gray-700/70 lg:absolute lg:mt-0"
+				className="mt-4  w-fit rounded-md bg-gray-200/70 p-2 ring-teal-600 active:ring dark:bg-gray-700/70 lg:absolute lg:mt-0"
 			>
 				<HiOutlineArrowSmLeft className="h-6 w-6 text-gray-600 dark:text-gray-300" />
 			</button>
-			<div className="prose prose-slate mx-auto w-full p-6 prose-a:text-blue-600 dark:prose-invert lg:mt-12  lg:p-0">
+			<div className="prose prose-slate mx-auto w-full p-2 prose-a:text-blue-600 dark:prose-invert lg:mt-12  lg:p-0">
 				<div className=" my-4 border border-transparent border-l-gray-300 pl-2   dark:border-l-gray-800">
 					<time className="text-sm text-gray-600 dark:text-gray-400 lg:text-base">
 						{date}

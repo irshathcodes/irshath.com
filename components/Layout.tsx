@@ -11,7 +11,7 @@ export default function Layout({ children }: Props) {
 			<ThemeProvider attribute="class">
 				<div className="mx-auto max-w-3xl lg:max-w-4xl">
 					<Navbar />
-					<main>{children}</main>
+					<main className="px-4 lg:px-0">{children}</main>
 				</div>
 			</ThemeProvider>
 		</>

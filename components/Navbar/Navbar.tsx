@@ -48,7 +48,7 @@ export default function Navbar() {
 	return (
 		<nav
 			className={cn(
-				"sticky top-0 mx-auto flex max-w-3xl items-center justify-between p-4 transition-transform dark:bg-black-900	 lg:max-w-4xl",
+				"sticky top-0 mx-auto flex max-w-3xl items-center justify-between p-4 transition-transform dark:bg-black-900 lg:max-w-4xl	 lg:p-0 lg:py-4",
 				{
 					"translate-y-0": showNav,
 					"-translate-y-20": !showNav,
