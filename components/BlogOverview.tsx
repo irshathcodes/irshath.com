@@ -1,5 +1,7 @@
 import BlogPost from "./BlogPost";
 import type { Posts } from "@/lib/types";
+import Link from "next/link";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 interface Props {
 	posts: Posts;
@@ -8,24 +10,35 @@ interface Props {
 export default function BlogOverview({ posts }: Props) {
 	const featuredPosts = posts.slice(0, 2);
 	return (
-		<div>
-			<h1 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
-				Features Blogs
-			</h1>
+		<div className="mb-10">
+			<div className="flex items-center justify-between">
+				<h1 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+					Features Blogs
+				</h1>
+			</div>
 
-			{featuredPosts.map(({ slug, frontmatter }) => {
-				const { title, excerpt, date } = frontmatter;
+			<div className="my-4 lg:my-0">
+				{featuredPosts.map(({ slug, frontmatter }) => {
+					const { title, excerpt, date } = frontmatter;
 
-				return (
-					<BlogPost
-						key={slug}
-						title={title}
-						excerpt={excerpt}
-						date={date}
-						slug={slug}
-					/>
-				);
-			})}
+					return (
+						<BlogPost
+							key={slug}
+							title={title}
+							excerpt={excerpt}
+							date={date}
+							slug={slug}
+						/>
+					);
+				})}
+				<Link
+					href="/blog"
+					className="my-2 flex items-center gap-1 capitalize text-gray-800 dark:text-gray-300"
+				>
+					<span>See all blogs</span>
+					<HiOutlineArrowNarrowRight className="h-5 w-5" />
+				</Link>
+			</div>
 		</div>
 	);
 }
