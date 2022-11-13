@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-interface Posts {
+interface Post {
 	slug: string;
 	frontmatter: {
 		title: string;
@@ -10,7 +10,6 @@ interface Posts {
 		excerpt: string;
 	};
 }
-[];
 
 export default function getPosts() {
 	const postsDir = "blog-posts";
@@ -29,7 +28,7 @@ export default function getPosts() {
 		return {
 			slug,
 			frontmatter,
-		} as Posts;
+		} as Post;
 	});
 
 	// sort by recent posts

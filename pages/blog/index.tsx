@@ -2,14 +2,6 @@ import { InferGetStaticPropsType } from "next";
 import getPosts from "@/utils/getPosts";
 import BlogPost from "@/components/BlogPost";
 
-export const getStaticProps = async () => {
-	const posts = getPosts();
-
-	return {
-		props: { posts },
-	};
-};
-
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Blog({ posts }: Props) {
@@ -22,9 +14,23 @@ export default function Blog({ posts }: Props) {
 				const { title, excerpt, date } = frontmatter;
 
 				return (
-					<BlogPost title={title} excerpt={excerpt} date={date} slug={slug} />
+					<BlogPost
+						key={slug}
+						title={title}
+						excerpt={excerpt}
+						date={date}
+						slug={slug}
+					/>
 				);
 			})}
 		</div>
 	);
 }
+
+export const getStaticProps = async () => {
+	const posts = getPosts();
+
+	return {
+		props: { posts },
+	};
+};
