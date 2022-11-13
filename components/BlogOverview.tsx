@@ -12,7 +12,7 @@ export default function BlogOverview({ posts }: Props) {
 	return (
 		<div className="mb-10">
 			<div className="flex items-center justify-between">
-				<h1 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+				<h1 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
 					Features Blogs
 				</h1>
 			</div>
