@@ -48,7 +48,7 @@ export default function Navbar() {
 	return (
 		<nav
 			className={cn(
-				"sticky top-0 mx-auto flex max-w-3xl items-center  justify-between   p-4 transition-transform dark:bg-black-900	 lg:max-w-4xl  ",
+				"sticky top-0 mx-auto flex max-w-3xl items-center justify-between p-4 transition-transform dark:bg-black-900	 lg:max-w-4xl",
 				{
 					"translate-y-0": showNav,
 					"-translate-y-20": !showNav,
@@ -70,12 +70,10 @@ export default function Navbar() {
 					<li
 						key={link.id}
 						className={cn(
-							" capitalize text-gray-700  hover:text-teal-500 dark:text-gray-100 dark:hover:text-teal-400",
+							" capitalize  hover:text-teal-500  dark:hover:text-teal-400",
 							{
-								"text-teal-500 dark:text-teal-400":
-									router.pathname === link.url,
-								"text-gray-700 dark:text-gray-100":
-									router.pathname !== link.url,
+								"text-teal-500 dark:text-teal-400": router.asPath === link.url,
+								"text-gray-700 dark:text-gray-100": router.asPath !== link.url,
 							}
 						)}
 					>
@@ -89,7 +87,7 @@ export default function Navbar() {
 				{mounted && (
 					<button
 						type="button"
-						className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm active:outline-none dark:bg-black-700"
+						className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm  active:outline-none dark:bg-black-700"
 						onClick={() =>
 							setTheme(resolvedTheme === "dark" ? "light" : "dark")
 						}

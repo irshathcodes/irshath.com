@@ -62,9 +62,9 @@ export default function MobileNav({
 									"w-full py-2 text-lg font-medium capitalize tracking-tight active:rounded-md active:bg-gray-100 dark:active:bg-gray-600",
 									{
 										"text-teal-500 dark:text-teal-400":
-											router.pathname === link.url,
+											router.asPath === link.url,
 										"text-gray-700 dark:text-gray-300":
-											router.pathname !== link.url,
+											router.asPath !== link.url,
 									}
 								)}
 							>
