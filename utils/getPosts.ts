@@ -1,15 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
-interface Post {
-	slug: string;
-	frontmatter: {
-		title: string;
-		date: string;
-		excerpt: string;
-	};
-}
+import type { Posts } from "@/lib/types";
 
 export default function getPosts() {
 	const postsDir = "blog-posts";
@@ -28,7 +20,7 @@ export default function getPosts() {
 		return {
 			slug,
 			frontmatter,
-		} as Post;
+		};
 	});
 
 	// sort by recent posts
@@ -39,5 +31,5 @@ export default function getPosts() {
 		);
 	});
 
-	return posts;
+	return posts as Posts;
 }

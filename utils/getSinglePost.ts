@@ -3,16 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
-
-interface Post {
-	slug: string;
-	frontmatter: {
-		title: string;
-		date: string;
-		excerpt: string;
-	};
-	content: string;
-}
+import type { Post } from "@/lib/types";
 
 export default async function getSinglePost(slug: string) {
 	const markdownWithMeta = fs.readFileSync(
