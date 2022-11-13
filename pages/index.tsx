@@ -1,11 +1,23 @@
+import { InferGetStaticPropsType } from "next";
 import Hero from "@/components/Hero";
 import BlogOverview from "@/components/BlogOverview";
+import getPosts from "@/utils/getPosts";
 
-export default function Home() {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+export default function Home(props: Props) {
 	return (
 		<>
 			<Hero />
-			<BlogOverview />
+			<BlogOverview posts={props.posts} />
 		</>
 	);
 }
+
+export const getStaticProps = async () => {
+	const posts = getPosts();
+
+	return {
+		props: { posts },
+	};
+};
