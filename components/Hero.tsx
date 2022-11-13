@@ -3,7 +3,7 @@ const buttonStyles =
 
 export default function Hero() {
 	return (
-		<section className="my-16  lg:px-0">
+		<section className="my-16 mb-20">
 			<h1 className="text-4xl font-extrabold capitalize tracking-tight text-gray-800 dark:text-gray-200 sm:text-6xl">
 				<span className="block pb-2">hi,</span>
 				<span className="block pb-2">i'm irshath</span>
