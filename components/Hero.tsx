@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 const buttonStyles =
-	"my-4 rounded-md px-4 py-1 text-lg  font-medium capitalize ring-1  ring-gray-900 transition-all duration-300  hover:scale-105 hover:shadow  hover:shadow-teal-500 active:scale-90 dark:text-gray-300  dark:ring-gray-600";
+	"my-4 rounded-md px-4 py-1 text-lg  font-medium capitalize ring-1 inline-block  ring-gray-900 transition-all duration-300  hover:scale-105 hover:shadow  hover:shadow-teal-500 active:scale-90 dark:text-gray-300  dark:ring-gray-600";
 
 export default function Hero() {
 	return (
@@ -13,7 +15,9 @@ export default function Hero() {
 				Love to create experience on the web.
 			</p>
 			<div className="space-x-4">
-				<button className={buttonStyles}>contact me</button>
+				<Link href="/#contact" className={buttonStyles} scroll={false}>
+					contact me
+				</Link>
 				<button className={buttonStyles}>resume</button>
 			</div>
 		</section>

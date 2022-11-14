@@ -13,7 +13,7 @@ const navLinks = [
 	{ id: 1, name: "projects", url: "/projects" },
 	{ id: 2, name: "blogs", url: "/blog" },
 	{ id: 3, name: "about", url: "/about" },
-	{ id: 4, name: "contact", url: "/contact" },
+	{ id: 4, name: "contact", url: "/#contact" },
 ];
 
 export default function Navbar() {

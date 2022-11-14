@@ -6,12 +6,12 @@ const socialLinkStyles =
 
 export default function Contact() {
 	return (
-		<div className="my-20">
+		<section className="my-20" id="contact">
 			<h1 className="my-4 text-2xl font-semibold text-gray-800 dark:text-gray-200">
 				Contact
 			</h1>
 			<p className="mb-5 text-lg text-gray-700 dark:text-gray-400">
-				You can contact me through email, or hit me a DM on my socials.{" "}
+				You can contact me through email, or hit me a DM on one of my socials.{" "}
 			</p>
 
 			<a
@@ -42,6 +42,6 @@ export default function Contact() {
 				<FaLinkedin className="h-5 w-5" />
 				<span>Mohammed Irshath</span>
 			</a>
-		</div>
+		</section>
 	);
 }
