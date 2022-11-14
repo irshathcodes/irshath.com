@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import cn from "classnames";
 import myLogo from "@/public/my-logo.png";
-import { FiMoon } from "react-icons/fi";
+import { FiMoon, FiSun } from "react-icons/fi";
 import { HiOutlineMenuAlt4, HiOutlineSun } from "react-icons/hi";
 import { useTheme } from "next-themes";
 import MobileNav from "./MobileNav";
@@ -87,13 +87,13 @@ export default function Navbar() {
 				{mounted && (
 					<button
 						type="button"
-						className="relative rounded-lg bg-gray-100 py-1 px-2 shadow-sm  active:outline-none dark:bg-black-700"
+						className="relative  rounded-lg bg-gray-100 py-1 px-2 shadow-sm  active:outline-none dark:bg-black-700"
 						onClick={() =>
 							setTheme(resolvedTheme === "dark" ? "light" : "dark")
 						}
 					>
-						<HiOutlineSun
-							className=" absolute inline-block h-6 w-6 rotate-90 text-gray-900  opacity-0 transition-all duration-300 dark:rotate-0  
+						<FiSun
+							className="absolute top-1/2 left-1/2 inline-block h-4 w-4 -translate-y-1/2 -translate-x-1/2 rotate-90 text-gray-900  opacity-0 transition-all duration-300 dark:rotate-0  
 							dark:text-gray-200 dark:opacity-100 "
 						/>
 						<FiMoon className="inline-block h-6 w-6 text-gray-900 opacity-100 transition-all duration-300  dark:rotate-90 dark:text-gray-200 dark:opacity-0" />
