@@ -55,7 +55,10 @@ export default function Navbar() {
 				}
 			)}
 		>
-			<Link href="/">
+			<Link
+				href="/"
+				className="rounded-full transition-all hover:ring hover:ring-gray-300 dark:hover:ring-gray-700"
+			>
 				<Image src={myLogo} alt="my logo" className="h-12 w-12" />
 			</Link>
 
