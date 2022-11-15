@@ -43,6 +43,7 @@ export default function MobileNav({
 						Navigation
 					</h3>
 					<button
+						type="button"
 						className="rounded px-1 transition-shadow duration-300 active:ring-2 active:ring-gray-400 "
 						onClick={() => setShowMobileMenu(false)}
 					>

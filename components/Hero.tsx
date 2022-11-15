@@ -18,7 +18,9 @@ export default function Hero() {
 				<Link href="/#contact" className={buttonStyles} scroll={false}>
 					contact me
 				</Link>
-				<button className={buttonStyles}>resume</button>
+				<button type="button" className={buttonStyles}>
+					resume
+				</button>
 			</div>
 		</section>
 	);
