@@ -10,7 +10,7 @@ export default function Contact() {
 			<h1 className="my-4 text-2xl font-bold text-gray-800 dark:text-gray-200">
 				Contact
 			</h1>
-			<p className="mb-5 text-lg text-gray-700 dark:text-gray-400">
+			<p className="mb-6 text-lg text-gray-700 dark:text-gray-400">
 				You can contact me through email, or hit me a DM on one of my socials.{" "}
 			</p>
 
