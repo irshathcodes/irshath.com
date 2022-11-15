@@ -15,13 +15,14 @@ export default function About() {
 				</p>
 
 				<p className="p-styles mt-6">
-					I was curious what are these "servers" How do they work. So I started
-					learning NodeJS and got to know how to create APIs and stuff. I've
-					created Rest APIs in ExpressJS. I describe myself as a Front-End
-					developer who likes to create fast, smooth web apps which gives user a
-					good experience. I'm familiar with JavaScript framework React, but I'm
-					open to learn any other modern frameworks out there. I prefer to build
-					TypeScript first application. And I use vim btw :){" "}
+					I was curious what are these &quot;servers&quot; How do they work. So
+					I started learning NodeJS and got to know how to create APIs and
+					stuff. I&apos;ve created Rest APIs in ExpressJS. I describe myself as
+					a Front-End developer who likes to create fast, smooth web apps which
+					gives user a good experience. I&apos;m familiar with JavaScript
+					framework React, but I&apos;m open to learn any other modern
+					frameworks out there. I prefer to build TypeScript first application.
+					And I use vim btw {":)"}
 				</p>
 			</div>
 		</Container>

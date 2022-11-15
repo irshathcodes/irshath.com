@@ -8,7 +8,7 @@ export default function Hero() {
 		<section className="mb-24 mt-16 md:mt-20">
 			<h1 className="text-4xl font-extrabold capitalize tracking-tight text-gray-800 dark:text-gray-200 sm:text-6xl">
 				<span className="block pb-2">hi,</span>
-				<span className="block pb-2">i'm irshath</span>
+				<span className="block pb-2">i&apos;m irshath</span>
 				<span className="block pb-1">web developer</span>
 			</h1>
 			<p className="py-4 text-left text-xl font-medium text-gray-600 dark:text-gray-400 sm:text-xl">
