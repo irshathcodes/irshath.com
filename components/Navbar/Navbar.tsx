@@ -91,6 +91,7 @@ export default function Navbar() {
 					<button
 						type="button"
 						className="relative  rounded-lg bg-gray-100 py-1 px-2 shadow-sm  active:outline-none dark:bg-black-700"
+						aria-label="toggle theme"
 						onClick={() =>
 							setTheme(resolvedTheme === "dark" ? "light" : "dark")
 						}
