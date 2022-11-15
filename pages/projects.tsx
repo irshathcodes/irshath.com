@@ -1,9 +1,13 @@
 import projects from "../data/projects.json";
 import Project from "@/components/Project";
+import Container from "@/components/Container";
 
 export default function Projects() {
 	return (
-		<div>
+		<Container
+			title="Projects - Irshath Codes"
+			description="I've created some simple projects to learn web development, you can see them live. source code is available on github!"
+		>
 			<h1 className="heading-styles mt-10 mb-4">Projects</h1>
 			<p className="mb-4 text-gray-700 dark:text-gray-300">
 				I've created some simple projects to learn web development, you can see
@@ -15,6 +19,6 @@ export default function Projects() {
 					<Project key={project.id} {...project} />
 				))}
 			</div>
-		</div>
+		</Container>
 	);
 }

@@ -4,12 +4,13 @@ import Hero from "@/components/Hero";
 import BlogOverview from "@/components/BlogOverview";
 import getPosts from "@/utils/getPosts";
 import Contact from "@/components/Contact";
+import Container from "@/components/Container";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Home(props: Props) {
 	return (
-		<>
+		<Container title="Irshath Codes - Web Developer">
 			<Hero />
 			<BlogOverview posts={props.posts} />
 			<Contact />
@@ -22,7 +23,7 @@ export default function Home(props: Props) {
 				<Link href="/projects">projects</Link>, or learn more{" "}
 				<Link href="about">about</Link> me.
 			</p>
-		</>
+		</Container>
 	);
 }
 

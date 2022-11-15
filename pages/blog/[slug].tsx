@@ -8,6 +8,7 @@ import {
 import getSinglePost from "@/utils/getSinglePost";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { useRouter } from "next/router";
+import Container from "@/components/Container";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -16,7 +17,7 @@ export default function Post({ frontmatter, content }: Props) {
 	const { title, date, excerpt } = frontmatter;
 
 	return (
-		<>
+		<Container title={title} description={excerpt}>
 			<button
 				type="button"
 				onClick={() => router.back()}
@@ -35,7 +36,7 @@ export default function Post({ frontmatter, content }: Props) {
 
 				<article dangerouslySetInnerHTML={{ __html: content }}></article>
 			</div>
-		</>
+		</Container>
 	);
 }
 
