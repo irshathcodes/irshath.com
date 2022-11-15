@@ -1,4 +1,4 @@
-import BlogPost from "./BlogPost";
+import BlogPost from "@/components/BlogPost";
 import type { Posts } from "@/lib/types";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";

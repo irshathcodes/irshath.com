@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar/Navbar";
-import Footer from "./Footer";
+import Footer from "@/components/Footer";
 
 interface Props {
 	children: React.ReactNode;
