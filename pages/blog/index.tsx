@@ -7,9 +7,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export default function Blog({ posts }: Props) {
 	return (
 		<div className="my-8">
-			<h1 className="my-8 text-3xl font-bold text-gray-800 dark:text-gray-200">
-				All Posts
-			</h1>
+			<h1 className="heading-styles my-8">All Posts</h1>
 			{posts.map(({ slug, frontmatter }) => {
 				const { title, excerpt, date } = frontmatter;
 

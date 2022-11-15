@@ -4,9 +4,7 @@ import Project from "@/components/Project";
 export default function Projects() {
 	return (
 		<div>
-			<h1 className="mt-10 mb-4 text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100">
-				Projects
-			</h1>
+			<h1 className="heading-styles mt-10 mb-4">Projects</h1>
 			<p className="mb-4 text-gray-700 dark:text-gray-300">
 				I've created some simple projects to learn web development, you can see
 				them live. source code is available on github!
