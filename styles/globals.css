@@ -21,7 +21,11 @@
 
 @layer components {
 	.heading-styles {
-		@apply text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100;
+		@apply text-3xl font-bold capitalize tracking-tight text-gray-800 dark:text-gray-100;
+	}
+
+	.p-styles {
+		@apply max-w-prose leading-8 text-gray-700 dark:text-gray-300;
 	}
 }
 

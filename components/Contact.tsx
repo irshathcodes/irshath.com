@@ -7,7 +7,7 @@ const socialLinkStyles =
 export default function Contact() {
 	return (
 		<section className="my-20" id="contact">
-			<h1 className="my-4 text-2xl font-semibold text-gray-800 dark:text-gray-200">
+			<h1 className="my-4 text-2xl font-bold text-gray-800 dark:text-gray-200">
 				Contact
 			</h1>
 			<p className="mb-5 text-lg text-gray-700 dark:text-gray-400">
