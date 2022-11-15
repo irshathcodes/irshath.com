@@ -15,6 +15,7 @@ export default function Container({
 		<div>
 			<Head>
 				<title>{title}</title>
+				<meta name="robots" content="follow, index" />
 				<meta name="description" content={description} />
 			</Head>
 			{children}
