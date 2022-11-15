@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"name": "kanban Board App",
+		"description": "Simple task manager app to keep track of your day-to-day tasks",
+		"tech": "TailwindCSS, React, React-query",
+		"link": "https://mykanbanapp.vercel.app/",
+		"github": "https://github.com/irshathcodes/kanban-app"
+	},
+	{
+		"id": 2,
+		"name": "kanban Api",
+		"description": "Rest Api with cookie based authentication for Kanban Board App",
+		"tech": "ExpressJS, MongoDB with mongoose library",
+		"link": "https://kanban-board-api.up.railway.app/",
+		"github": "https://github.com/irshathcodes/kanban-api"
+	},
+	{
+		"id": 3,
+		"name": "personal Portfolio and Blog",
+		"description": "my personal porfolio and blog rendered from markdown, written in typescript",
+		"tech": "TailwindCSS, NextJS and Remark for converting markdown to html",
+		"link": "https://irshathcodes.com/",
+		"github": "https://github.com/irshathcodes/irshathcodes.com"
+	},
+	{
+		"id": 4,
+		"name": "E-Commerce Api",
+		"description": "Rest Api for a e-commerce application where you can add products, place order and pay using Stripe",
+		"tech": "ExpressJS, MongoDB with mongoose, Stripe for payment",
+		"link": "https://ecommerce-api.up.railway.app/",
+		"github": "https://github.com/irshathcodes/e-commerce-api"
+	},
+	{
+		"id": 5,
+		"name": "Movies Info App",
+		"description": "A Movies information app where you can search for movies and get ratings and other information",
+		"tech": "Create React App",
+		"link": "https://moviesinfoo.netlify.app/",
+		"github": "https://github.com/irshathcodes/movies-info"
+	},
+	{
+		"id": 6,
+		"name": "Simple Voice Assistant",
+		"description": "A basic alexa like voice assistant created as a fun college project",
+		"tech": "Python",
+		"link": "https://github.com/irshathcodes/jarvis-ai-voice-assistant",
+		"github": "https://github.com/irshathcodes/jarvis-ai-voice-assistant"
+	},
+	{
+		"id": 7,
+		"name": "UI Snippets",
+		"description": "Collection of UI components like menu, accordion. Created when I was learning javascript",
+		"tech": "NextJS",
+		"link": "https://react-ui-snippets.vercel.app/",
+		"github": "https://github.com/irshathcodes/ui-snippets"
+	}
+]
