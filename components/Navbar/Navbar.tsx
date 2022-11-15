@@ -68,7 +68,7 @@ export default function Navbar() {
 				setShowMobileMenu={setShowMobileMenu}
 			/>
 
-			<ul className="hidden gap-8 rounded-full bg-white/90 px-6 py-2 text-sm font-medium text-black-800 shadow-lg shadow-black-800/5 ring-1 ring-black-900/5 backdrop-blur dark:bg-black-800/90 dark:text-zinc-200 dark:ring-white/10 sm:flex">
+			<ul className="hidden rounded-full bg-white/90 px-2 py-2 text-sm font-medium text-black-800 shadow-lg shadow-black-800/5 ring-1 ring-black-900/5 backdrop-blur dark:bg-black-800/90 dark:text-zinc-200 dark:ring-white/10 sm:flex">
 				{navLinks.map((link) => (
 					<li
 						key={link.id}
@@ -80,7 +80,9 @@ export default function Navbar() {
 							}
 						)}
 					>
-						<Link href={link.url}>{link.name}</Link>
+						<Link href={link.url} className="px-4">
+							{link.name}
+						</Link>
 					</li>
 				))}
 			</ul>
