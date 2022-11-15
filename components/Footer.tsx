@@ -23,6 +23,7 @@ export default function Footer() {
 					href="https://github.com/irshathcodes"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="hover:brightness-125 active:brightness-75"
 				>
 					<AiFillGithub className="h-7 w-7" />
 				</a>
@@ -30,6 +31,7 @@ export default function Footer() {
 					href="https://twitter.com/irshathcodes"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="hover:brightness-125 active:brightness-75"
 				>
 					<AiOutlineTwitter className="h-7 w-7" />
 				</a>
@@ -37,6 +39,7 @@ export default function Footer() {
 					href="https://www.linkedin.com/in/irshathcodes/"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="hover:brightness-125 active:brightness-75"
 				>
 					<AiFillLinkedin className="h-7 w-7" />
 				</a>
