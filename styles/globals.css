@@ -4,17 +4,27 @@
 
 /* CSS */
 
-@layer base {
-	html {
-		@apply scroll-smooth;
-	}
-}
-
 :root {
 	font-family: "Inter", sans-serif;
 }
 @supports (font-variation-settings: normal) {
 	:root {
 		font-family: "Inter var", sans-serif;
+	}
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+}
+
+@layer utilities {
+	.custom-shadow {
+		box-shadow: rgba(71, 85, 105, 0.1) 0px 8px 24px;
+	}
+
+	.custom-shadow:hover {
+		box-shadow: rgba(71, 85, 105, 0.3) 0px 8px 24px;
 	}
 }
