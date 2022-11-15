@@ -33,7 +33,7 @@ export default function BlogOverview({ posts }: Props) {
 				})}
 				<Link
 					href="/blog"
-					className="my-2 flex items-center gap-1 capitalize text-gray-800 dark:text-gray-300"
+					className="my-2 flex items-center gap-1 capitalize text-gray-800 hover:brightness-125 active:brightness-75 dark:text-gray-300"
 				>
 					<span>See all blogs</span>
 					<HiOutlineArrowNarrowRight className="h-5 w-5" />
