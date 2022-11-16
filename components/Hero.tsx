@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const buttonStyles =
+const linkStyles =
 	"my-4 rounded-md px-4 py-1 text-lg  font-medium capitalize ring-1 inline-block  ring-gray-900 transition-all duration-300  hover:scale-105 hover:shadow  hover:shadow-teal-500 active:scale-90 dark:text-gray-300  dark:ring-gray-600";
 
 export default function Hero() {
@@ -15,12 +15,17 @@ export default function Hero() {
 				Love to create experience on the web.
 			</p>
 			<div className="space-x-4">
-				<Link href="/#contact" className={buttonStyles} scroll={false}>
+				<Link href="/#contact" className={linkStyles} scroll={false}>
 					contact me
 				</Link>
-				<button type="button" className={buttonStyles}>
+				<a
+					href="/irshath-resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={linkStyles}
+				>
 					resume
-				</button>
+				</a>
 			</div>
 		</section>
 	);
