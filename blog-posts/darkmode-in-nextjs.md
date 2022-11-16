@@ -1,8 +1,7 @@
 ---
 title: "Dark Mode in Next JS"
 date: "November 16, 2022"
-excerpt: "Learn how to toggle darkmode in Next JS without flashes using next-themes and TailwindCSS"
-cover_image: "/images/posts/img3.jpg"
+excerpt: "Learn how to implement darkmode in Next JS."
 ---
 
 There are multiple ways to implement dark mode in nextjs. We'll see the most common way most people do it and the limitations of each method.
