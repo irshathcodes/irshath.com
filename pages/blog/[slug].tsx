@@ -9,6 +9,7 @@ import getSinglePost from "@/utils/getSinglePost";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { useRouter } from "next/router";
 import Container from "@/components/Container";
+import Head from "next/head";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -18,6 +19,17 @@ export default function Post({ frontmatter, content }: Props) {
 
 	return (
 		<Container title={title} description={excerpt}>
+			<Head>
+				<link
+					rel="preload"
+					href="https://unpkg.com/prism-themes@1.6.0/themes/prism-atom-dark.css"
+					as="script"
+				/>
+				<link
+					href="https://unpkg.com/prism-themes@1.6.0/themes/prism-atom-dark.css"
+					rel="stylesheet"
+				/>
+			</Head>
 			<button
 				type="button"
 				onClick={() => router.back()}
