@@ -13,7 +13,7 @@
 		"description": "Rest Api with cookie based authentication for Kanban Board App",
 		"tech": "ExpressJS, MongoDB with mongoose library",
 		"link": "https://kanban-board-api.up.railway.app/",
-		"github": "https://github.com/irshathcodes/kanban-api"
+		"github": "https://kanban-api-edr9.onrender.com"
 	},
 	{
 		"id": 3,
@@ -28,7 +28,7 @@
 		"name": "E-Commerce Api",
 		"description": "Rest Api for a e-commerce application where you can add products, place order and pay using Stripe",
 		"tech": "ExpressJS, MongoDB with mongoose, Stripe for payment",
-		"link": "https://ecommerce-api.up.railway.app/",
+		"link": "https://e-commerce-api-gzzm.onrender.com",
 		"github": "https://github.com/irshathcodes/e-commerce-api"
 	},
 	{
