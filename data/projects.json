@@ -12,8 +12,8 @@
 		"name": "kanban Api",
 		"description": "Rest Api with cookie based authentication for Kanban Board App",
 		"tech": "ExpressJS, MongoDB with mongoose library",
-		"link": "https://kanban-board-api.up.railway.app/",
-		"github": "https://kanban-api-edr9.onrender.com"
+		"link": "https://kanban-api-edr9.onrender.com",
+		"github": "https://github.com/irshathcodes/kanban-api"
 	},
 	{
 		"id": 3,
