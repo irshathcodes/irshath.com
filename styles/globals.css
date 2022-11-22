@@ -4,6 +4,15 @@
 
 /* CSS */
 
+:root {
+	font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: "Inter var", sans-serif;
+	}
+}
+
 @layer base {
 	html {
 		@apply scroll-smooth;
