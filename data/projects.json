@@ -12,7 +12,7 @@
 		"name": "kanban Api",
 		"description": "Rest Api with cookie based authentication for Kanban Board App",
 		"tech": "ExpressJS, MongoDB with mongoose library",
-		"link": "https://kanban-api-edr9.onrender.com",
+		"link": "https://kanban-api.cyclic.app/",
 		"github": "https://github.com/irshathcodes/kanban-api"
 	},
 	{
@@ -28,7 +28,7 @@
 		"name": "E-Commerce Api",
 		"description": "Rest Api for a e-commerce application where you can add products, place order and pay using Stripe",
 		"tech": "ExpressJS, MongoDB with mongoose, Stripe for payment",
-		"link": "https://e-commerce-api-gzzm.onrender.com",
+		"link": "https://ecommerce-node-api.cyclic.app/",
 		"github": "https://github.com/irshathcodes/e-commerce-api"
 	},
 	{
