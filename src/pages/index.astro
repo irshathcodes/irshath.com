@@ -2,9 +2,39 @@
 import Layout from "@/layouts/Layout.astro";
 import Navbar from "@/components/Navbar.astro";
 import Hero from "@/components/Hero.astro";
+import Card from "@/components/Card.astro";
+
+const blogs = new Array(3).fill(null).map((_, i) => ({
+    title: `Title ${i + 1}`,
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    createdAt: "Nov 1, 2023",
+}));
 ---
 
 <Layout>
     <Navbar />
     <Hero />
+
+    <section class="mb-8">
+        <div class="flex justify-between">
+            <h2 class="text-lg font-bold">Latest Blogs</h2>
+            <a href="/blogs" class="font-medium">All Blogs</a>
+        </div>
+
+        <ul class="mt-6 w-full space-y-6">
+            {
+                blogs.map((blog) => (
+                    <li>
+                        <Card
+                            title={blog.title}
+                            description={blog.description}
+                            createdAt={blog.createdAt}
+                            link={`/${blog.title}`}
+                        />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 </Layout>
