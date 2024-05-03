@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/Hero.astro";
 import Card from "@/components/Card.astro";
+import RightArrowIcon from "@/assets/RightArrowIcon.astro";
 
 const blogs = new Array(3).fill(null).map((_, i) => ({
     title: `Title ${i + 1}`,
@@ -17,7 +18,12 @@ const blogs = new Array(3).fill(null).map((_, i) => ({
     <section class="mb-20">
         <div class="flex justify-between">
             <h2 class="text-xl font-bold">Latest Blogs</h2>
-            <a href="/blogs">All Blogs</a>
+            <a
+                href="/blogs"
+                class="flex items-center gap-2 hover:underline underline-offset-4"
+                >All Blogs
+                <RightArrowIcon />
+            </a>
         </div>
 
         <ul class="mt-6 w-full space-y-6">

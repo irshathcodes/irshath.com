@@ -6,7 +6,7 @@ import TwitterLogo from "@/assets/TwitterLogo.astro";
 import LinkedInLogo from "@/assets/LinkedInLogo.astro";
 ---
 
-<section class="mt-24 mb-40 flex justify-between gap-4 flex-col-reverse">
+<section class="mt-20 mb-40 flex justify-between gap-4 flex-col-reverse">
     <div class="flex-1">
         <h1 class="font-bold text-2xl mb-2">Hello, I'm Irshath.</h1>
         <p class="text-lg text-muted-foreground">
@@ -14,10 +14,10 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
             creating great web experiences that make a difference.
         </p>
         <div class="flex gap-5 mt-6 items-center">
-            <button
-                type="button"
+            <a
+                href="./irshath-resume.pdf"
                 class="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm w-fit h-fit font-medium hover:opacity-90"
-                >Download resume</button
+                target="_blank">Download resume</a
             >
             <div class="flex gap-2">
                 <a
@@ -50,7 +50,7 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
     </div>
     <Image
         src={myImage}
-        class="w-40 h-40 object-cover object-center rounded-lg shrink-0"
+        class="w-40 h-40 object-cover object-center rounded-full shrink-0"
         alt="irshath"
         width={160}
         height={160}
