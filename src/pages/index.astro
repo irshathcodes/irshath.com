@@ -1,9 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Navbar from "@/components/Navbar.astro";
 import Hero from "@/components/Hero.astro";
 import Card from "@/components/Card.astro";
-import Footer from "@/components/Footer.astro";
 
 const blogs = new Array(3).fill(null).map((_, i) => ({
     title: `Title ${i + 1}`,
@@ -14,13 +12,12 @@ const blogs = new Array(3).fill(null).map((_, i) => ({
 ---
 
 <Layout>
-    <Navbar />
     <Hero />
 
     <section class="mb-20">
         <div class="flex justify-between">
-            <h2 class="text-lg font-bold">Latest Blogs</h2>
-            <a href="/blogs" class="font-medium">All Blogs</a>
+            <h2 class="text-xl font-bold">Latest Blogs</h2>
+            <a href="/blogs">All Blogs</a>
         </div>
 
         <ul class="mt-6 w-full space-y-6">
@@ -38,6 +35,4 @@ const blogs = new Array(3).fill(null).map((_, i) => ({
             }
         </ul>
     </section>
-
-    <Footer />
 </Layout>
