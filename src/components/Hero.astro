@@ -6,7 +6,9 @@ import TwitterLogo from "@/assets/TwitterLogo.astro";
 import LinkedInLogo from "@/assets/LinkedInLogo.astro";
 ---
 
-<section class="mt-20 mb-40 flex justify-between gap-4 flex-col-reverse">
+<section
+    class="mt-20 mb-40 flex justify-between gap-6 flex-col-reverse md:flex-row"
+>
     <div class="flex-1">
         <h1 class="font-bold text-2xl mb-2">Hello, I'm Irshath.</h1>
         <p class="text-lg text-muted-foreground">
@@ -21,7 +23,7 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
             >
             <div class="flex gap-2">
                 <a
-                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/90"
+                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/80"
                     target="_blank"
                     href="https://github.com/irshathcodes"
                     aria-label="github"
@@ -29,7 +31,7 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
                     <GithubLogo />
                 </a>
                 <a
-                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/90"
+                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/80"
                     target="_blank"
                     href="https://twitter.com/irshathcodes"
                     aria-label="twitter / X"
@@ -38,7 +40,7 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
                 </a>
 
                 <a
-                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/90"
+                    class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg text-foreground/80"
                     href="https://www.linkedin.com/in/irshathcodes/"
                     aria-label="linkedin"
                     target="_blank"
@@ -50,7 +52,7 @@ import LinkedInLogo from "@/assets/LinkedInLogo.astro";
     </div>
     <Image
         src={myImage}
-        class="w-40 h-40 object-cover object-center rounded-full shrink-0"
+        class="w-40 h-40 object-cover rounded-lg shrink-0 object-[left_-58px]"
         alt="irshath"
         width={160}
         height={160}
