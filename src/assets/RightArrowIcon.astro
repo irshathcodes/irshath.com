@@ -4,6 +4,7 @@ interface Props extends HTMLAttributes<"svg"> {}
 ---
 
 <svg
+    {...Astro.props}
     xmlns="http://www.w3.org/2000/svg"
     width="16"
     height="16"
@@ -13,6 +14,5 @@ interface Props extends HTMLAttributes<"svg"> {}
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    {...Astro.props}
     ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
 >
