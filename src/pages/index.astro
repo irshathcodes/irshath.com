@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/Hero.astro";
+import Card from "@/components/Card.astro";
+import RightArrowIcon from "@/assets/RightArrowIcon.astro";
+
+const allPosts = await Astro.glob("./blog/*.md");
+---
+
+<Layout>
+    <Hero />
+
+    <section class="mb-20">
+        <div class="flex justify-between">
+            <h2 class="text-xl font-bold">Latest Blogs</h2>
+            <a
+                href="/blog"
+                class="flex items-center gap-2 hover:underline underline-offset-4"
+                >All Blogs
+                <RightArrowIcon />
+            </a>
+        </div>
+
+        <ul class="mt-6 w-full space-y-6">
+            {
+                allPosts.map(({ url, frontmatter }) => (
+                    <li>
+                        <Card
+                            title={frontmatter.title}
+                            description={frontmatter.excerpt}
+                            createdAt={frontmatter.date}
+                            link={url!}
+                        />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</Layout>

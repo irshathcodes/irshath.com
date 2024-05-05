@@ -1,0 +1,28 @@
+---
+import MiniChevronRightIcon from "@/assets/MiniChevronRightIcon.astro";
+import RightArrowIcon from "@/assets/RightArrowIcon.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    createdAt: string;
+    link: string;
+}
+const { title, link, description, createdAt } = Astro.props;
+---
+
+<article class="border shadow-md p-5 rounded-lg bg-card text-card-foreground">
+    <a href={link}>
+        <div class="flex justify-between">
+            <h1 class="text-xl font-semibold mb-1.5">
+                {title}
+            </h1>
+            <span class="text-muted-foreground text-sm">{createdAt}</span>
+        </div>
+        <p class="mb-2 text-muted-foreground text-sm">{description}</p>
+        <span
+            class="flex items-center underline underline-offset-4 text-sm gap-2"
+            >Read more
+        </span>
+    </a>
+</article>

@@ -1,0 +1,49 @@
+---
+import EmailIcon from "@/assets/EmailIcon.astro";
+import GithubLogo from "@/assets/GithubLogo.astro";
+import LinkedInLogo from "@/assets/LinkedInLogo.astro";
+import TwitterLogo from "@/assets/TwitterLogo.astro";
+---
+
+<footer>
+    <hr />
+    <div class="flex justify-between px-2 items-center py-6 gap-4">
+        <span class="text-muted-foreground">Irshath</span>
+
+        <div class="flex gap-2 self-start">
+            <a
+                class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg"
+                href="mailto:irshathcodes@gmail.com"
+                aria-label="my email address"
+                title="irshathcodes@gmail.com"
+            >
+                <EmailIcon class="w-4 h-4" />
+            </a>
+            <a
+                class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg"
+                target="_blank"
+                href="https://github.com/irshathcodes"
+                aria-label="github"
+            >
+                <GithubLogo class="w-4 h-4" />
+            </a>
+            <a
+                class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg"
+                target="_blank"
+                href="https://twitter.com/irshathcodes"
+                aria-label="twitter / X"
+            >
+                <TwitterLogo class="w-4 h-4" />
+            </a>
+
+            <a
+                class="hover:bg-accent hover:text-accent-foreground p-2 rounded-lg"
+                href="https://www.linkedin.com/in/irshathcodes/"
+                aria-label="linkedin"
+                target="_blank"
+            >
+                <LinkedInLogo class="w-4 h-4" />
+            </a>
+        </div>
+    </div>
+</footer>
