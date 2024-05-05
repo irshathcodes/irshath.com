@@ -1,15 +1,10 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import Layout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
 import Card from "@/components/Card.astro";
 import RightArrowIcon from "@/assets/RightArrowIcon.astro";
 
-const blogs = new Array(3).fill(null).map((_, i) => ({
-    title: `Title ${i + 1}`,
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    createdAt: "Nov 1, 2023",
-}));
+const allPosts = await Astro.glob("./blog/*.md");
 ---
 
 <Layout>
@@ -28,13 +23,13 @@ const blogs = new Array(3).fill(null).map((_, i) => ({
 
         <ul class="mt-6 w-full space-y-6">
             {
-                blogs.map((blog) => (
+                allPosts.map(({ url, frontmatter }) => (
                     <li>
                         <Card
-                            title={blog.title}
-                            description={blog.description}
-                            createdAt={blog.createdAt}
-                            link={`/${blog.title}`}
+                            title={frontmatter.title}
+                            description={frontmatter.excerpt}
+                            createdAt={frontmatter.date}
+                            link={url!}
                         />
                     </li>
                 ))
