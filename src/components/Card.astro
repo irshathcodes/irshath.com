@@ -11,8 +11,11 @@ interface Props {
 const { title, link, description, createdAt } = Astro.props;
 ---
 
-<article class="border shadow-md p-5 rounded-lg bg-card text-card-foreground">
-    <a href={link}>
+<article>
+    <a
+        href={link}
+        class="border shadow-md p-5 rounded-lg bg-card text-card-foreground block hover:border-accent-foreground active:scale-100"
+    >
         <div class="flex justify-between">
             <h1 class="text-xl font-semibold mb-1.5">
                 {title}
