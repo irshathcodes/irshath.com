@@ -4,7 +4,10 @@ import Layout from "@/layouts/BaseLayout.astro";
 const allPosts = await Astro.glob("./*.md");
 ---
 
-<Layout>
+<Layout
+    title="Irshath Codes - Blogs"
+    description="Blogs related to web development."
+>
     <main class="mb-20 mt-4 min-h-[440px]">
         <h1 class="text-xl font-bold mb-8">Blogs</h1>
         <ul class="mt-6 w-full space-y-6">
