@@ -6,4 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://irshath.com",
   integrations: [mdx(), sitemap(), tailwind()],
+  prefetch: {
+    defaultStrategy: "viewport",
+  },
 });
