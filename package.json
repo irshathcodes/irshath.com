@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "dev:network": "astro dev --host",
     "build": "astro check && astro build",
+    "deploy": "pnpm run build && wrangler deploy",
     "preview": "astro preview",
     "preview:network": "astro preview --host",
     "astro": "astro",
@@ -36,7 +37,11 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
-      "sharp"
+      "sharp",
+      "workerd"
     ]
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
   }
 }
