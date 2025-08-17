@@ -13,13 +13,16 @@ import BackToTop from "@components/BackToTop.astro";
     </div>
     <div class="flex justify-between items-center">
       <div>
-        &copy; 2024 {`|`} {SITE.NAME}
+        &copy; <span id="footer-current-year"></span>
+        <span> | </span>
+        {SITE.NAME}
       </div>
       <div class="flex flex-wrap gap-1 items-center">
         <button
           id="light-theme-button"
           aria-label="Light theme"
           class="group size-8 flex items-center justify-center rounded-full"
+          title="Light theme"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,6 +51,7 @@ import BackToTop from "@components/BackToTop.astro";
           id="dark-theme-button"
           aria-label="Dark theme"
           class="group size-8 flex items-center justify-center rounded-full"
+          title="Dark theme"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +72,7 @@ import BackToTop from "@components/BackToTop.astro";
           id="system-theme-button"
           aria-label="System theme"
           class="group size-8 flex items-center justify-center rounded-full"
+          title="System theme"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

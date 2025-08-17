@@ -1,76 +1,81 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
-date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+title: "KanBased"
+description: "A fast, keyboard-driven kanban app that updates instantly with real-time sync."
+date: "Aug 15 2025"
+demoURL: "https://kanbased.com"
+repoURL: "https://github.com/irshathcodes/kanbased"
 ---
 
-![Astro Sphere Lighthouse Score](/astro-sphere.jpg)
+![KanBased app image](https://kanbased.com/public/kanbased-app-image.webp)
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+KanBased is a minimal kanban board application designed for speed and efficiency. Built from frustration with bloated and complex project management tools, it focuses on what matters most: fast, keyboard-driven task management with instant synchronization across all devices.
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+No loading spinners. No refresh buttons. No waiting. Just pure productivity.
 
-## 🚀 Deploy your own
+## ✨ Key Features
 
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+- **⚡ Instant Sync** - Changes propagate in real-time across all devices using Zero sync engine
+- **⌨️ Keyboard Shortcuts** - Navigate and manage tasks without touching your mouse, includes CMD+K search
+- **📝 Rich Markdown** - Create detailed task descriptions with ProseMirror-powered markdown editing
+- **👥 Team Collaboration** - Invite team members and work together seamlessly with role-based access
+- **🎯 Minimal Interface** - Clean, distraction-free design that keeps you focused on your work
+- **🔓 Open Source** - MIT licensed and self-hostable for complete control over your data
 
-## 📋 Features
+## 🚀 Why KanBased?
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+**Save 30+ seconds per task** - No more waiting for pages to load or data to refresh. Every action is instant.
 
-## 💯 Lighthouse score
-![Astro Sphere Lighthouse Score](/lighthouse.png)
+**Stay in flow state** - Keyboard shortcuts keep your hands on the keys and your mind focused on what matters.
 
-## 🕊️ Lightweight
-All pages under 100kb (including fonts)
+**Never lose work** - Real-time sync means changes are saved and shared instantly across all devices.
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+**Zero vendor lock-in** - Free forever, open source, and self-hostable when you need it.
 
-## 📄 Configuration
+## 🛠️ Tech Stack
 
-The blog posts on the demo serve as the documentation and configuration.
+### Frontend
 
-## 💻 Commands
+- **React SPA** with **TanStack Router** for client-side routing
+- **TypeScript** for type safety
+- **ProseMirror** for rich text editing
 
-All commands are run from the root of the project, from a terminal:
+### Backend
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+- **Hono** web framework on **Node.js**
+- **Drizzle ORM** with **PostgreSQL** database
+- **Better Auth** for authentication
+- **Zero sync engine** for real-time synchronization
+- **S3-compatible storage** for file handling
+- **Resend** for email services
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+## 🏗️ Project Structure
+
+The application is organized as a monorepo with three main components:
+
+```
+├── frontend/         # React SPA client application
+├── backend/          # API server, sync engine, and database
+└── landing-page/     # Static marketing site
+```
+
+## 🎯 Design Philosophy
+
+KanBased was built with a specific philosophy in mind:
+
+- **Simplicity over features** - Focus on core kanban functionality done extremely well
+- **Speed over complexity** - Every interaction should feel instant
+- **Keyboard-first** - Power users shouldn't need to reach for their mouse
+- **Open source** - Complete transparency and community ownership
+
+## 🔧 Self-Hosting
+
+Being open source, KanBased can be fully self-hosted on your own infrastructure. This gives you:
+
+- Complete data ownership and privacy
+- Ability to customize and extend functionality
+- Support for larger teams and usage patterns
+- Integration with your existing infrastructure
 
 ## 🏛️ License
 
-MIT
+MIT License - Free for personal and commercial use
