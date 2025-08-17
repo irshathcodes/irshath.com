@@ -1,7 +1,7 @@
 ---
 title: "KanBased"
 description: "A fast, keyboard-driven kanban app that updates instantly with real-time sync"
-date: "Aug 15 2025"
+date: "Jun 5 2025"
 demoURL: "https://kanbased.com"
 repoURL: "https://github.com/irshathcodes/kanbased"
 ---

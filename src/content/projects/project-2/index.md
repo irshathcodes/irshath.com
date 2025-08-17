@@ -1,7 +1,7 @@
 ---
 title: "Portfolio & Blog"
 description: "A minimal portfolio and blog built with Astro. Fast, accessible, modern"
-date: "Aug 15 2025"
+date: "Dec 15 2024"
 demoURL: "https://irshath.com"
 repoURL: "https://github.com/irshathcodes/irshath.com"
 ---
