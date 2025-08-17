@@ -1,10 +1,12 @@
 ---
 title: "Portfolio & Blog"
-description: "A minimal portfolio and blog built with Astro. Fast, accessible, modern."
+description: "A minimal portfolio and blog built with Astro. Fast, accessible, modern"
 date: "Aug 15 2025"
 demoURL: "https://irshath.com"
 repoURL: "https://github.com/irshathcodes/irshath.com"
 ---
+
+![My portfolio website](/irshath-portfolio-image.webp)
 
 My personal portfolio and blog built with Astro. I wanted something fast, minimal, and easy to maintain while showcasing my work and writing.
 

@@ -1,6 +1,6 @@
 ---
 title: "KanBased"
-description: "A fast, keyboard-driven kanban app that updates instantly with real-time sync."
+description: "A fast, keyboard-driven kanban app that updates instantly with real-time sync"
 date: "Aug 15 2025"
 demoURL: "https://kanbased.com"
 repoURL: "https://github.com/irshathcodes/kanbased"
@@ -12,16 +12,16 @@ KanBased is a minimal kanban board application designed for speed and efficiency
 
 No loading spinners. No refresh buttons. No waiting. Just pure productivity.
 
-## ✨ Key Features
+## Key Features
 
-- **⚡ Instant Sync** - Changes propagate in real-time across all devices using Zero sync engine
-- **⌨️ Keyboard Shortcuts** - Navigate and manage tasks without touching your mouse, includes CMD+K search
-- **📝 Rich Markdown** - Create detailed task descriptions with ProseMirror-powered markdown editing
-- **👥 Team Collaboration** - Invite team members and work together seamlessly with role-based access
-- **🎯 Minimal Interface** - Clean, distraction-free design that keeps you focused on your work
-- **🔓 Open Source** - MIT licensed and self-hostable for complete control over your data
+- **Instant Sync** - Changes propagate in real-time across all devices using Zero sync engine
+- **Keyboard Shortcuts** - Navigate and manage tasks without touching your mouse, includes CMD+K search
+- **Rich Markdown** - Create detailed task descriptions with ProseMirror-powered markdown editing
+- **Team Collaboration** - Invite team members and work together seamlessly with role-based access
+- **Minimal Interface** - Clean, distraction-free design that keeps you focused on your work
+- **Open Source** - MIT licensed and self-hostable for complete control over your data
 
-## 🚀 Why KanBased?
+## Why KanBased?
 
 **Save 30+ seconds per task** - No more waiting for pages to load or data to refresh. Every action is instant.
 
@@ -31,7 +31,7 @@ No loading spinners. No refresh buttons. No waiting. Just pure productivity.
 
 **Zero vendor lock-in** - Free forever, open source, and self-hostable when you need it.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -48,7 +48,7 @@ No loading spinners. No refresh buttons. No waiting. Just pure productivity.
 - **S3-compatible storage** for file handling
 - **Resend** for email services
 
-## 🏗️ Project Structure
+## Project Structure
 
 The application is organized as a monorepo with three main components:
 
@@ -58,7 +58,7 @@ The application is organized as a monorepo with three main components:
 └── landing-page/     # Static marketing site
 ```
 
-## 🎯 Design Philosophy
+## Design Philosophy
 
 KanBased was built with a specific philosophy in mind:
 
@@ -67,7 +67,7 @@ KanBased was built with a specific philosophy in mind:
 - **Keyboard-first** - Power users shouldn't need to reach for their mouse
 - **Open source** - Complete transparency and community ownership
 
-## 🔧 Self-Hosting
+## Self-Hosting
 
 Being open source, KanBased can be fully self-hosted on your own infrastructure. This gives you:
 
@@ -76,6 +76,6 @@ Being open source, KanBased can be fully self-hosted on your own infrastructure.
 - Support for larger teams and usage patterns
 - Integration with your existing infrastructure
 
-## 🏛️ License
+## License
 
 MIT License - Free for personal and commercial use
