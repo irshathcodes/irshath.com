@@ -8,24 +8,24 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
+  TITLE: "Irshath - Frontend Lead & Full Stack Developer",
   DESCRIPTION:
     "Irshath - Frontend Lead & Full Stack Developer passionate about building high-performance web experiences",
 };
 
 export const BLOG: Metadata = {
-  TITLE: "Blog",
+  TITLE: "Irshath's Blog",
   DESCRIPTION:
     "A collection of articles on topics I am passionate about, including frontend development, web performance, and web design.",
 };
 
 export const WORK: Metadata = {
-  TITLE: "Work",
+  TITLE: "Irshath's Work",
   DESCRIPTION: "Where I have worked and what I have done.",
 };
 
 export const PROJECTS: Metadata = {
-  TITLE: "Projects",
+  TITLE: "Irshath's Projects",
   DESCRIPTION:
     "A collection of my projects, with links to repositories and demos.",
 };
